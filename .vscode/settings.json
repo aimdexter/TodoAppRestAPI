@@ -1,14 +1,24 @@
 {
-    "workbench.colorCustomizations": {
-        "[*Dark*]": {
-            "progressBar.background": "#0D9373",
-            "notificationsInfoIcon.foreground": "#0D9373",
-            "editor.selectionBackground": "#0D937333"
-        },
-        "[*Light*]": {
-            "progressBar.background": "#0D9373",
-            "notificationsInfoIcon.foreground": "#0D9373",
-            "editor.selectionBackground": "#0D937333"
-        }
+  "workbench.colorCustomizations": {
+    "[*Dark*]": {
+      "progressBar.background": "#0D9373",
+      "notificationsInfoIcon.foreground": "#0D9373",
+      "editor.selectionBackground": "#0D937333"
+    },
+    "[*Light*]": {
+      "progressBar.background": "#0D9373",
+      "notificationsInfoIcon.foreground": "#0D9373",
+      "editor.selectionBackground": "#0D937333"
     }
+  },
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.indexing": true,
+  "python.analysis.packageIndexDepths": [
+    {
+      "depth": 100,
+      "includeAllSymbols": true,
+      "name": ""
+    }
+  ]
 }
