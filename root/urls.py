@@ -25,7 +25,7 @@ from django.conf.urls.static import static
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Todo backend documentation",
+        title="Kanban board backend documentation",
         default_version="v1",
     ),
     public=True,
@@ -44,5 +44,5 @@ urlpatterns = [
         schema_view.with_ui("redoc", cache_timeout=0),
         name="schema-redoc",
     ),
-    path("api/v1/todos/", include("todos.urls")),
+    path("api/v1/", include("todos.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,20 +1,15 @@
 from django.db import models
 from authentication.models import User
 
-# Create your models here.
-
-
-class Todo(models.Model):
-    title = models.CharField(max_length=120)
-    content = models.TextField(blank=True, null=True)
-    completed = models.BooleanField(default=False)
-
 
 class Board(models.Model):
     title = models.CharField(max_length=255)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
 
 
 class List(models.Model):
@@ -23,6 +18,9 @@ class List(models.Model):
     ord = models.FloatField(default=0.0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
 
 
 class Card(models.Model):
@@ -33,6 +31,9 @@ class Card(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.title
+
 
 class Item(models.Model):
     title = models.CharField(max_length=255)
@@ -40,6 +41,9 @@ class Item(models.Model):
     done = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
 
 
 class BoardMembership(models.Model):

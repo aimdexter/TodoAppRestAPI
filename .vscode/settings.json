@@ -11,6 +11,12 @@
       "editor.selectionBackground": "#0D937333"
     }
   },
+  "[python]": {
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": "explicit",
+          "source.unusedImports": "explicit",
+        }
+    },
   "python.analysis.autoImportCompletions": true,
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.indexing": true,
