@@ -44,5 +44,5 @@ urlpatterns = [
         schema_view.with_ui("redoc", cache_timeout=0),
         name="schema-redoc",
     ),
-    path("api/v1/", include("todos.urls")),
+    path("api/v1/", include("kanban.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

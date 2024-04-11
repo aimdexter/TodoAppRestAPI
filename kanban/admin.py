@@ -1,5 +1,5 @@
 from django.contrib import admin
-from todos.models import Board, BoardMembership, Card, CardAssignment, Item, List
+from kanban.models import Board, BoardMembership, Card, CardAssignment, Item, List
 
 
 @admin.register(Board)
