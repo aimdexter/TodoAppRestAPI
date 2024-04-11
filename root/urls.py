@@ -23,6 +23,8 @@ from drf_yasg import openapi
 from django.conf import settings
 from django.conf.urls.static import static
 
+from authentication.views import LogoutView
+
 schema_view = get_schema_view(
     openapi.Info(
         title="Kanban board backend documentation",
@@ -34,6 +36,9 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/v1/auth/", include("djoser.urls")),
+    path("api/v1/auth/", include("djoser.urls.jwt")),
+    path("api/v1/auth/logout/", LogoutView.as_view()),
     path(
         "docs/swagger/",
         schema_view.with_ui("swagger", cache_timeout=0),
